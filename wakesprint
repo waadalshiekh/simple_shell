@@ -1,0 +1,14 @@
+#include "shell.h"
+
+/**
+* wakesprint - is a print function in C.
+*
+* @str : a string to be printed.
+*
+* Return : void.
+*/
+
+void wakesprint (const char* str)
+{
+write (1,str,strlen(str));
+}
