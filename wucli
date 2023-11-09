@@ -1,6 +1,16 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "wakesshell.h"
 
 /**
-*
+* promptfun - is a function to display the prompt.
 */
 
+int promptfun ()
+{
+    char *yourc = NULL;
+    size_t qwert = 0,
+    getline (&yourc, &qwert, stdin);
+    
+    return 0;
+}
