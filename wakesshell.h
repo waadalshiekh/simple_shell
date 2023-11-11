@@ -8,6 +8,8 @@
 #include <sys/wait.h>
 #include <stdbool.h>
 
-void wakesprint (const char* str)
+void wakesprint (const char* str);
+void wakes_shell_prompt();
+void wakesinput = (char*)wakesmalloc(the_buffer*sizeof(char));
 
 #endif /* WAKES_SHELL_H */
