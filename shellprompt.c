@@ -1,6 +1,6 @@
-#include <wakesshell.h>
+#include "wakesshell.h"
 
 void wakes_shell_prompt()
 {
-	wakesprint("shell>");
+        wakesprint("shell>");
 }

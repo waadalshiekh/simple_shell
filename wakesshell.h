@@ -11,6 +11,6 @@
 void wakesprint (const char* str);
 void wakes_shell_prompt();
 void wakesinput = (char*)wakesmalloc(the_buffer*sizeof(char));
-int parscom(int input, char *comm[]);
+int main(void);
 
 #endif /* WAKES_SHELL_H */
