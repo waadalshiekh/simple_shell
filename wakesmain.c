@@ -1,29 +1,29 @@
 #include <stdio.h>
 #include <wakesshell.h>
-
-#define BUFFER_SIZE 1024
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 
 int main()
 {
-	char* wakesinput = NULL;
-	size_t the_buffer = BUFFER_SIZE;
+	char wakaes[1024];
 
-	wakesinput = (char*)wakesmalloc(the_buffer*sizeof(char));
-	if(wakesinput == NULL)
-	{
-          perror("wakesmalloc");
-	  exit(EXIT_FAILURE);
-	}
 	while(1)
 	{
 		wakes_shell_prompt();
+		if(getline(wakes, , stdin) == NULL)
+		{
+			wakesprint("\n")
+				break;
+		}
+		wakesInput();
+		wakes_execute(char *wakes);
+		
+		return (EXIT_SUCCESS);
+
+
 	}
 
-	wakesprint("Enter: ");
-	getline(&wakesinput,&the_buffer,stdin);
-	wakesprint("Input:%s",wakesinput);
-	free(wakesinput);
 	
-	return(0);
 }

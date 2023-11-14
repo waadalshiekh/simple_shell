@@ -10,7 +10,9 @@
 
 void wakesprint (const char* str);
 void wakes_shell_prompt();
-void wakesinput = (char*)wakesmalloc(the_buffer*sizeof(char));
+void wakesInput();
+void wakes_exit();
+void wakes_execute(char *wakes);
 int main(void);
 
 #endif /* WAKES_SHELL_H */
