@@ -5,12 +5,15 @@
 #include <unistd.h>
 #include <stdio_ext.h>
 
+char *waad = NULL;
+ssize_t waadwakes;
+
 int main()
 {
-	char wakes = (char*)wakes(1024*sizeof(char));
+	char *wakes = (char*)malloc(1024*sizeof(char));
 	if (wakes == NULL)
 	{
-		perror("wakes")
+		perror("wakes");
 			exit(EXIT_FAILURE);
 	}
 
@@ -18,18 +21,22 @@ int main()
 	while(1)
 	{
 		wakes_shell_prompt();
-		ssize_t waadwakes = getline(waad, NULL, stdin);
+		waadwakes = getline(&waad, NULL, stdin);
 		if (waadwakes < 0)
 		{
 			perror("getline");
 			exit(EXIT_FAILURE);
 		}
+
 		wakesInput();
 		wakes_execute(wakes);
 		
-		return (EXIT_SUCCESS);
+		free(waad);
+		waad = NULL;
+
 
 
 	}
+	free(wakes);
 	return (0);
 }
