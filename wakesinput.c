@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 #include "wakesshell.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,3 +23,4 @@ void wakesInput()
 	free (wakesinput);
 
 }
+>>>>>>> 4f5a0e7d1f9f4e72cc4ef67946dfa63d3751b03a

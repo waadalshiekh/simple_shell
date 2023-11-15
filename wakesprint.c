@@ -10,5 +10,5 @@
 
 void wakesprint (const char* str)
 {
-write (1,str,strlen(str));
+write (STDOUT_FILENO, str, strlen(str));
 }
