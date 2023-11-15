@@ -1,16 +1,18 @@
 #include "wakesshell.h"
 #include <stdio.h>
 #include <string.h>
+// #include <unistd.h>
 
 int main(void) {
-    char f[] = "command from the input function";
-    char m[] = " ";
+    char sc[] = "command from the input function";
+    char dc[] = " ";
 
-    char *cinput = strtok(f, m);
+    char *cinput = strtok(sc, dc);
 
     while (cinput != NULL)
-    {wakesprint("%f\n", cinput);
-    cinput = strtok(NULL, m);
+    { 
+    wakesprint("%s\n", "cinput\n");
+    cinput = strtok(NULL, dc);
     }
     return 0;
 }

@@ -1,8 +1,8 @@
-#include <wakesshell.h>
+#include "wakesshell.h"
 #include <stdio.h>
 
 void wakes_exit()
 {
-	wakesprint("Exit the shell..\n");
-	exit();
+        wakesprint("Exit the shell..\n");
+        exit();
 }
