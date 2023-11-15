@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <wakesshell.h>
-#include <untistd.h>
+#include "wakesshell.h"
+#include <unistd.h>
 #include <sys/wait.h>
 
 void wakes_execute(char *wakes)
@@ -14,8 +14,8 @@ void wakes_execute(char *wakes)
 	}
 	else if (wakes_child == 0)
 	{
-		char *my_wakes[] = {wakes_command, NULL};
-		if (execve(wakes_command, my_wakes, NULL) == -1)
+		char *my_wakes[] = {wakes_child, NULL};
+		if (execve(wakes_child, my_wakes, NULL) == -1)
 		{
 			perror("wakes execute");
 			exit(EXIT_FAILURE);
