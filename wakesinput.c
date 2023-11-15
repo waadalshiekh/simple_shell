@@ -9,7 +9,7 @@ void wakesInput()
 	size_t wakes_buffer = BUFFER_SIZE;
 
 	wakesinput = (char*)malloc(wakes_buffer*sizeof(char));
-	if (wakesinput==NULL)
+	if (wakesinput == NULL)
 	{
 		perror("wakes");
 		exit(EXIT_FAILURE);
