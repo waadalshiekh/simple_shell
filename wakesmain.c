@@ -40,7 +40,6 @@ int main()
                 }
 
                 wakesInput();
-                wakesparse();
                 wakes_execute((char*)wakesexecutepath);
                 free(waad);
                 waad = NULL;
