@@ -3,16 +3,24 @@
 #include <string.h>
 #include <unistd.h>
 
+/**
+  * wakesparse - function parses the entered command
+  * @s : array of strings containing entered command 
+  * @c : array of strings indicating defined delimiters
+  * @input : a variable containing the result of strtok function
+  * Return
+**/
 
-    char sc[] = "command from the input function";
-    char dc[] = " ";
+int wakespaese(void) {
+    char s[] = "wakesinput";
+    char d[] = " ";
 
-    char *cinput = strtok(sc, dc);
+    char *input = strtok(s, d);
 
-    while (cinput != NULL)
+    while (input != NULL)
     { 
-    wakesprint(cinput);
-    cinput = strtok(NULL, dc);
+    wakesprint(input);
+    input = strtok(NULL, d);
     }
-    return (0);
+    return 0;
 }

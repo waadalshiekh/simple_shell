@@ -5,6 +5,14 @@
 #include <unistd.h>
 #include <stdio_ext.h>
 
+/**
+  * main - function
+  * @waad :
+  * @waadwakes :
+  * @wakes :
+  * Return :
+**/
+
 char *waad = NULL;
 ssize_t waadwakes;
 
@@ -32,8 +40,8 @@ int main()
                 }
 
                 wakesInput();
-
-		wakes_execute((char*)wakesexecutepath);
+                wakesparse();
+                wakes_execute((char*)wakesexecutepath);
                 free(waad);
                 waad = NULL;
         }

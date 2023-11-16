@@ -13,6 +13,5 @@ void print_p_childid(pid_t wakesprocessid);
 void wakes_shell_prompt();
 void wakesInput();
 void wakes_execute(const char *wakes);
-int main(void);
-
+int wakespaese(void);
 #endif /* WAKES_SHELL_H */
