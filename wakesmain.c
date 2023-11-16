@@ -8,9 +8,12 @@
 char *waad = NULL;
 ssize_t waadwakes;
 
+const char *wakesexecutepath = "/user/bin/";
+
 int main()
 {
         char *wakes = (char*)malloc(1024*sizeof(char));
+
         if (wakes == NULL)
         {
                 perror("wakes");
@@ -29,10 +32,10 @@ int main()
                 }
 
                 wakesInput();
-                wakes_execute(wakes);
+
+		wakes_execute((char*)wakesexecutepath);
                 free(waad);
                 waad = NULL;
-                return (EXIT_SUCCESS);
         }
         free(wakes);
         return (0);
