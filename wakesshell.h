@@ -8,10 +8,11 @@
 #include <sys/wait.h>
 #include <stdbool.h>
 
-void wakesprint(const char* str);
+void wakesprint(const char *str);
 void print_p_childid(pid_t wakesprocessid);
-void wakes_shell_prompt();
-void wakesInput();
+wakes_shell_prompt(void);
+wakesInput(void);
 void wakes_execute(const char *wakes);
 int wakespaese(void);
+
 #endif /* WAKES_SHELL_H */

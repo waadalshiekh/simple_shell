@@ -4,23 +4,24 @@
 #include <unistd.h>
 
 /**
-  * wakesparse - function parses the entered command
-  * @s : array of strings containing entered command 
-  * @c : array of strings indicating defined delimiters
-  * @input : a variable containing the result of strtok function
-  * Return
+  * @summary - parses the entered command.
+  * wakesspace tokenize the wakes input depending on space
+  * @s : array of strings containing entered command.
+  * @c : array of strings indicating defined delimiters.
+  * @input : a variable containing the result of strtok function.
+  * @return alwyas returns 0 (success).
 **/
 
-int wakespaese(void) {
-    char s[] = "wakesinput";
-    char d[] = " ";
+int wakespaese(void)
+{
+char s[] = "wakesinput";
+char d[] = " ";
+char *input = strtok(s, d);
 
-    char *input = strtok(s, d);
-
-    while (input != NULL)
-    { 
-    wakesprint(input);
-    input = strtok(NULL, d);
-    }
-    return 0;
+while (input != NULL)
+{
+wakesprint(input);
+input = strtok(NULL, d);
+}
+return (0);
 }

@@ -1,11 +1,11 @@
 #include "wakesshell.h"
 
 /**
-  * wakes_shell_prompt - displays shell's prompt
-  * 
-*/
+  * wakes_shell_prompt function - displays shell's prompt
+  *
+  */
 
-void wakes_shell_prompt()
+wakes_shell_prompt(void)
 {
-        wakesprint("shell>");
+wakesprint("shell>");
 }

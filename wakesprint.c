@@ -8,7 +8,7 @@
 * Return : void.
 */
 
-void wakesprint (const char* str)
+void wakesprint (const char *str)
 {
-write (STDOUT_FILENO, str, strlen(str));
+write(STDOUT_FILENO, str, strlen(str));
 }
